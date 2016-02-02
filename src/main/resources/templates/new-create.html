@@ -64,24 +64,33 @@
 
 									<div class="form-body">
 										<div class="form-group form-md-line-input">
-											<input type="text" class="form-control" th:field="*{name}"
+											<label th:if="${#fields.hasErrors('name')}" style="color:red;"
+												th:errors="*{name}">Name fields error</label> <input
+												type="text" class="form-control" th:field="*{name}"
 												id="name" name="name" /> <label for="name">Name</label>
-
 										</div>
 										<div class="form-group form-md-line-input">
-											<input type="text" class="form-control" th:field="*{email}"
+											<label th:if="${#fields.hasErrors('email')}" style="color:red;"
+												th:errors="*{email}">Email fields error</label> <input
+												type="text" class="form-control" th:field="*{email}"
 												id="email" name="email" /> <label for="email">Email</label>
 
-										</div>
-										<div class="form-group form-md-line-input">
-											<input type="text" class="form-control" id="batch"
-												th:field="*{batch}" name="batch" /> <label for="batch">Batch</label>
 
 										</div>
 										<div class="form-group form-md-line-input">
-											<input type="text" class="form-control"
-												th:field="*{interested}" id="interested" name="interested" />
-											<label for="interested">Interested</label>
+											<label th:if="${#fields.hasErrors('batch')}" style="color:red;"
+												th:errors="*{batch}">Batch fields error</label> <input
+												type="text" class="form-control" id="batch"
+												th:field="*{batch}" name="batch" /> <label for="batch">Batch</label>
+
+
+										</div>
+										<div class="form-group form-md-line-input">
+											<label th:if="${#fields.hasErrors('interested')}"
+												th:errors="*{interested}" style="color:red;">Interested fields error</label> <input
+												type="text" class="form-control" th:field="*{interested}"
+												id="interested" name="interested" /> <label
+												for="interested">Interested</label>
 										</div>
 									</div>
 									<div class="form-actions noborder">

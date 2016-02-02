@@ -1,5 +1,12 @@
 package guru.springframework.domain;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
+import org.jboss.logging.Message;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -7,9 +14,21 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Information {
 	@Id
 	private String id = "";
+
+	@NotNull
+	@Size(min = 3, max = 50, message = "Name must be between 3 to 50")
 	private String name;
+
+	@NotNull
+	@Pattern(regexp = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$", message = "Invalid email address")
 	private String email;
+
+	@NotNull
+	@Size(min = 2, max = 4, message = "Batch must be between 2 to 4")
 	private String batch;
+
+	@NotNull
+	@Size(min = 3, max = 50, message = "Interest must be between 3 to 50")
 	private String interested;
 
 	public Information() {
