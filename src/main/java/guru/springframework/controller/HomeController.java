@@ -2,6 +2,7 @@ package guru.springframework.controller;
 
 import guru.springframework.domain.Information;
 import guru.springframework.service.InformationService;
+import guru.springframework.service.InterestService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -17,11 +18,13 @@ public class HomeController {
 
 	@Autowired
 	private InformationService informationService;
+	@Autowired
+	private InterestService interestService;
 
-	@RequestMapping({"","/"})
-	public String showIndex(Model model) {
+	@RequestMapping({"","/", "/interest" })
+	public String showInterestIndex(Model model) {
 		System.out.println("[DEBUG] [/]");
-		model.addAttribute("informations", informationService.getInformations());
-		return "new-index";
+		model.addAttribute("interests", interestService.getInterests());
+		return "index";
 	}
 }
