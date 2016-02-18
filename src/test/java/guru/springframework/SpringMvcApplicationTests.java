@@ -1,8 +1,8 @@
 package guru.springframework;
 
-import guru.springframework.dao.InformationRepository;
+
 import guru.springframework.dao.InterestRepository;
-import guru.springframework.domain.Information;
+
 import guru.springframework.domain.Interest;
 
 import org.junit.Test;
@@ -20,8 +20,7 @@ public class SpringMvcApplicationTests {
 
 	@Autowired
 	private InterestRepository interestRepository;
-	@Autowired
-	private InformationRepository infoRepository;
+
 
 	@Test
 	public void contextLoads() {

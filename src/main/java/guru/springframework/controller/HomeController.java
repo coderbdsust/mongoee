@@ -1,7 +1,5 @@
 package guru.springframework.controller;
 
-import guru.springframework.domain.Information;
-import guru.springframework.service.InformationService;
 import guru.springframework.service.InterestService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +13,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class HomeController {
-
-	@Autowired
-	private InformationService informationService;
 	@Autowired
 	private InterestService interestService;
 

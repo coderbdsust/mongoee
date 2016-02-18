@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.bson.types.ObjectId;
 
-import guru.springframework.domain.Information;
 import guru.springframework.domain.Interest;
 
 public interface InterestService {

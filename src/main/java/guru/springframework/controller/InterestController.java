@@ -4,10 +4,10 @@ import java.beans.PropertyEditorSupport;
 
 import javax.validation.Valid;
 
-import guru.springframework.domain.Information;
+
 import guru.springframework.domain.Interest;
 import guru.springframework.editor.ObjectIdEditor;
-import guru.springframework.service.InformationService;
+
 import guru.springframework.service.InterestService;
 
 import org.bson.types.ObjectId;
