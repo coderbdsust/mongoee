@@ -11,23 +11,25 @@
 <link
 	href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=all"
 	rel="stylesheet" type="text/css" />
-<link href="/metro/font-awesome/css/font-awesome.min.css"
+<link th:href="@{/metro/font-awesome/css/font-awesome.min.css}"
 	rel="stylesheet" type="text/css" />
-<link href="/metro/bootstrap/css/bootstrap.min.css" rel="stylesheet"
-	type="text/css" />
-<link href="/metro/bootstrap-switch/css/bootstrap-switch.min.css"
+<link th:href="@{/metro/bootstrap/css/bootstrap.min.css}"
 	rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" href="/metro/select2/select2.css" />
+<link th:href="@{/metro/bootstrap-switch/css/bootstrap-switch.min.css}"
+	rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css"
-	href="/metro/datatables/plugins/bootstrap/dataTables.bootstrap.css" />
+	th:href="@{/metro/select2/select2.css}" />
+<link rel="stylesheet" type="text/css"
+	th:href="@{/metro/datatables/plugins/bootstrap/dataTables.bootstrap.css}" />
 
 
-<link href="/metro/css/components.css" id="style_components"
+<link th:href="@{/metro/css/components.css}" id="style_components"
 	rel="stylesheet" type="text/css" />
-<link href="/metro/css/plugins.css" rel="stylesheet" type="text/css" />
-<link href="/metro/layout2/css/layout.css" rel="stylesheet"
+<link th:href="@{/metro/css/plugins.css}" rel="stylesheet"
 	type="text/css" />
-<link id="style_color" href="/metro/layout2/css/themes/grey.css"
+<link th:href="@{/metro/layout2/css/layout.css}" rel="stylesheet"
+	type="text/css" />
+<link id="style_color" th:href="@{/metro/layout2/css/themes/grey.css}"
 	rel="stylesheet" type="text/css" />
 
 <link rel="shortcut icon" href="favicon.ico" />
@@ -64,33 +66,36 @@
 
 									<div class="form-body">
 										<div class="form-group form-md-line-input">
-											<label th:if="${#fields.hasErrors('name')}" style="color:red;"
-												th:errors="*{name}">Name fields error</label> <input
-												type="text" class="form-control" th:field="*{name}"
-												id="name" name="name" /> <label for="name">Name</label>
+											<label th:if="${#fields.hasErrors('name')}"
+												style="color: red;" th:errors="*{name}">Name fields
+												error</label> <input type="text" class="form-control"
+												th:field="*{name}" id="name" name="name" /> <label
+												for="name">Name</label>
 										</div>
 										<div class="form-group form-md-line-input">
-											<label th:if="${#fields.hasErrors('email')}" style="color:red;"
-												th:errors="*{email}">Email fields error</label> <input
-												type="text" class="form-control" th:field="*{email}"
-												id="email" name="email" /> <label for="email">Email</label>
+											<label th:if="${#fields.hasErrors('email')}"
+												style="color: red;" th:errors="*{email}">Email
+												fields error</label> <input type="text" class="form-control"
+												th:field="*{email}" id="email" name="email" /> <label
+												for="email">Email</label>
 
 
 										</div>
 										<div class="form-group form-md-line-input">
-											<label th:if="${#fields.hasErrors('batch')}" style="color:red;"
-												th:errors="*{batch}">Batch fields error</label> <input
-												type="text" class="form-control" id="batch"
-												th:field="*{batch}" name="batch" /> <label for="batch">Batch</label>
+											<label th:if="${#fields.hasErrors('batch')}"
+												style="color: red;" th:errors="*{batch}">Batch
+												fields error</label> <input type="text" class="form-control"
+												id="batch" th:field="*{batch}" name="batch" /> <label
+												for="batch">Batch</label>
 
 
 										</div>
 										<div class="form-group form-md-line-input">
 											<label th:if="${#fields.hasErrors('interested')}"
-												th:errors="*{interested}" style="color:red;">Interested fields error</label> <input
-												type="text" class="form-control" th:field="*{interested}"
-												id="interested" name="interested" /> <label
-												for="interested">Interested</label>
+												th:errors="*{interested}" style="color: red;">Interested
+												fields error</label> <input type="text" class="form-control"
+												th:field="*{interested}" id="interested" name="interested" />
+											<label for="interested">Interested</label>
 										</div>
 									</div>
 									<div class="form-actions noborder">
@@ -108,21 +113,23 @@
 		</div>
 	</div>
 
-	<script src="/metro/jquery.min.js" type="text/javascript"></script>
-	<script src="/metro/jquery-migrate.min.js" type="text/javascript"></script>
-	<script src="/metro/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
-	<script src="/metro/bootstrap/js/bootstrap.min.js"
+	<script th:src="@{/metro/jquery.min.js}" type="text/javascript"></script>
+	<script th:src="@{/metro/jquery-migrate.min.js}" type="text/javascript"></script>
+	<script th:src="@{/metro/jquery-ui/jquery-ui.min.js}"
 		type="text/javascript"></script>
-	<script src="/metro/jquery.blockui.min.js" type="text/javascript"></script>
-	<script src="/metro/bootstrap-switch/js/bootstrap-switch.min.js"
+	<script th:src="@{/metro/bootstrap/js/bootstrap.min.js}"
 		type="text/javascript"></script>
-	<script type="text/javascript" src="/metro/select2/select2.min.js"></script>
+	<script th:src="@{/metro/jquery.blockui.min.js}" type="text/javascript"></script>
+	<script th:src="@{/metro/bootstrap-switch/js/bootstrap-switch.min.js}"
+		type="text/javascript"></script>
 	<script type="text/javascript"
-		src="/metro/datatables/media/js/jquery.dataTables.min.js"></script>
+		th:src="@{/metro/select2/select2.min.js}"></script>
 	<script type="text/javascript"
-		src="/metro/datatables/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
+		th:src="@{/metro/datatables/media/js/jquery.dataTables.min.js}"></script>
 	<script type="text/javascript"
-		src="/metro/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
-	<script src="/metro/pages/scripts/table-advanced.js"></script>
+		th:src="@{/metro/datatables/extensions/TableTools/js/dataTables.tableTools.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/metro/datatables/plugins/bootstrap/dataTables.bootstrap.js}"></script>
+	<script th:src="@{/metro/pages/scripts/table-advanced.js}"></script>
 </body>
 </html>
