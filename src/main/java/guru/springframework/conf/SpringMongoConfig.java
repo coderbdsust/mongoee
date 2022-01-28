@@ -14,7 +14,7 @@ import com.mongodb.MongoClient;
 public class SpringMongoConfig {
 
 	public @Bean MongoDbFactory mongoDbFactory() throws Exception {
-		return new SimpleMongoDbFactory(new MongoClient("127.0.0.1"), "test");
+		return new SimpleMongoDbFactory(new MongoClient("127.0.0.1", 7000), "test");
 	}
 	
 	public @Bean MongoTemplate mongoTemplate() throws Exception {
