@@ -28,6 +28,7 @@ These instructions will get you a copy of the project up and running on your loc
 * [JDK 8](https://www.oracle.com/de/java/technologies/javase/javase8-archive-downloads.html "JDK 8 Home Page")
 * [Spring Boot Framework](https://spring.io/ "Spring Boot Framework 1.3.2")
 * [MongoDB - NoSQL Database](https://www.mongodb.com/ "MongoDB NoSQL Database")
+* [Metronic - Admin Dashboard Theme](https://keenthemes.com/metronic/ "Metronic UI Theme")
 
 ## Versioning
 
